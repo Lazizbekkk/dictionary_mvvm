@@ -18,7 +18,7 @@ Kotlin	Main programming language
 XML	UI layout design
 Single Activity	Single-activity architecture with navigation
 MVVM	Modern architectural pattern for separation
-Cursor Adapter	Efficient data binding using SQLite cursor
+Cursor Adapter	Efficient data binding using Room database cursor adapter
 Animation	Applied for UI transitions and effects
 
 <p>
