@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">15K+ Dictionary</string>
+    <string name="sozning_manosi">Sozning manosi</string>
+    <string name="dictionary">Dictionary</string>
+    <string name="uzbek_englesh">UZBEK-ENGLESH</string>
+    <string name="app_desc_info">15K+ Dictionary application was created by Mamadiyorov Lazizbek in the course of completing the assignments given at the GITA Programmers Academy.</string>
+
+</resources>

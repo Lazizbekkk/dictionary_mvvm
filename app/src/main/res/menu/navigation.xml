@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/app_info"
+    android:icon="@drawable/ic_info"
+    android:title="App info">
+
+</item>
+    <item android:id="@+id/share"
+        android:icon="@drawable/img_10"
+        android:title="Share app">
+
+    </item>
+    <item android:id="@+id/cantact"
+        android:icon="@drawable/img_11"
+        android:title="TO cantact">
+
+    </item>
+    <item android:id="@+id/exit"
+        android:icon="@drawable/img_12"
+        android:title="Exit">
+
+    </item>
+</menu>

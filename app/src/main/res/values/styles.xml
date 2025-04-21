@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CustomSearchView" parent="Widget.AppCompat.SearchView">
+        <item name="android:textColorHint">@color/white</item> <!-- Hint matn rangi -->
+        <item name="android:textColor">@color/white</item> <!-- Matn rangi -->
+        <item name="queryBackground">@color/search_color</item> <!-- Foni rangi -->
+    </style>
+
+    <style name="MenuImageShape" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeBottomLeft">32dp</item>
+        <item name="cornerSizeBottomRight">32dp</item>
+    </style>
+
+</resources>

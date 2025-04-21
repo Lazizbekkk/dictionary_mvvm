@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:selectableItemBackground">
+
+    <!-- LinearLayout -->
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:background="@color/app_color"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="16dp"
+            android:tint="#fff"
+            android:src="@drawable/img_7"
+            tools:ignore="UseAppTint" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:fontFamily="@font/desc_font2"
+            android:text="Word meaning"
+            android:textSize="20sp"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/star_detail"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/yulduz2"
+            android:padding="4dp"
+            tools:ignore="UseAppTint" />
+    </LinearLayout>
+
+    <!-- CardView -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/administration"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:background="@color/app_color"
+                android:fontFamily="@font/desc_font2"
+                android:gravity="center"
+                android:text="Current word"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+
+                android:id="@+id/word_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/desc_font2"
+                android:text="Test"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/word_type"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/word_type" />
+
+            <TextView
+                android:id="@+id/word_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="51dp"
+                android:fontFamily="@font/extrabold"
+                android:text="Test"
+                android:textColor="#00BCD4"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/administration"
+                app:layout_constraintTop_toBottomOf="@+id/administration" />
+
+            <TextView
+                android:id="@+id/word_translate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/desc_font2"
+                android:text="Test"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/word_name"
+                app:layout_constraintTop_toBottomOf="@id/word_type" />
+
+            <ImageView
+                android:id="@+id/spic"
+                android:layout_width="150dp"
+                android:layout_height="90dp"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/img_19"
+                android:tint="@color/app_color"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/word_type"
+                tools:ignore="UseAppTint" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/book_listening"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent=".45"
+        app:layout_constraintHeight_percent=".45"
+        app:layout_constraintVertical_bias=".92"
+        android:scaleType="centerCrop"
+
+        android:src="@drawable/ic_book_listening2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </ImageView>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/desc_font2"
+        android:gravity="center"
+        android:text="Listening \nto the word"
+        android:textColor="@color/app_color"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintVertical_bias=".85"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

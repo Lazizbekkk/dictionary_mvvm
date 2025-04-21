@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeScreen">
+
+    <fragment
+        tools:layout="@layout/screen_menu"
+        android:id="@+id/homeScreen"
+        android:name="com.example.mamadiyorov_lazizbek.dictionarymvvm.presenter.screen.menu.MenuScreen"
+        android:label="HomeScreen" >
+        <action
+            android:id="@+id/action_homeScreen_to_screenDictionary"
+            app:destination="@id/screenDictionary" />
+        <action
+            android:id="@+id/action_homeScreen_to_screenInfo"
+            app:destination="@id/screenInfo" />
+        <action
+            android:id="@+id/action_homeScreen_to_exitDialog"
+            app:destination="@id/exitDialog" />
+
+    </fragment>
+    <fragment
+        tools:layout="@layout/screen_dictionary"
+        android:id="@+id/screenDictionary"
+        android:name="com.example.mamadiyorov_lazizbek.dictionarymvvm.presenter.screen.dictionary.DictionaryScreen"
+        android:label="ScreenDictionary" >
+        <action
+            android:id="@+id/action_screenDictionary_to_screenFavoriets"
+            app:destination="@id/screenFavoriets" />
+        <action
+            android:id="@+id/action_screenDictionary_to_screenWordDetail"
+            app:destination="@id/screenWordDetail" />
+
+    </fragment>
+    <fragment
+        tools:layout="@layout/screen_favorites"
+        android:id="@+id/screenFavoriets"
+        android:name="com.example.mamadiyorov_lazizbek.dictionarymvvm.presenter.screen.favoriet.FavorietsScreen"
+        android:label="ScreenFavoriets" >
+        <action
+            app:popUpTo="@id/screenFavoriets"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_screenFavoriets_to_screenWordDetail"
+            app:destination="@id/screenWordDetail" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/screen_word_details"
+        android:id="@+id/screenWordDetail"
+        android:name="com.example.mamadiyorov_lazizbek.dictionarymvvm.presenter.screen.word_details.WordDetailScreen"
+        android:label="ScreenWordDetail" >
+        <argument
+            android:name="dictionaryData"
+            app:argType="com.example.mamadiyorov_lazizbek.dictionarymvvm.data.source.local.room.entities.DictionaryEntity" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/screen_info"
+        android:id="@+id/screenInfo"
+        android:name="com.example.mamadiyorov_lazizbek.dictionarymvvm.presenter.screen.info.ScreenInfo"
+        android:label="ScreenInfo" />
+    <dialog
+        tools:layout="@layout/dialog_finish_app"
+        android:id="@+id/exitDialog"
+        android:name="com.example.mamadiyorov_lazizbek.dictionarymvvm.presenter.dialog.ExitDialog"
+        android:label="ExitDialog" />
+
+
+</navigation>
